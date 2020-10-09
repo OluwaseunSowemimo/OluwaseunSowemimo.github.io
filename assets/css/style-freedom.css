@@ -24,6 +24,399 @@ html {
   margin-right: auto;
   margin-left: auto; }
 
+.popup-overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  }
+
+.popup{
+  position: absolute;
+  top: -150%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(1.15);
+  width: 300px;
+  height: 420px;
+  background: #f5f5f5;
+  z-index: 1000;
+  opacity: 0;
+  box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+  transition: transform 300ms ease-in-out,opacity 300ms ease-in-out;
+}
+
+.popups-overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+  height: 100%;
+background: rgba(0, 0, 0, 0.6);
+  display: none;
+  }
+
+.popups{
+  position: absolute;
+  top: -150%;
+  left:50%;
+  transform: translate(-50%, -50%) scale(1.15);
+  width: 300px;
+  height: 420px;
+  background: #f5f5f5;
+  z-index: 1000;
+  opacity: 0;
+  box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+  transition: transform 300ms ease-in-out,opacity 300ms ease-in-out;
+}
+body.showSignInForm .popup-overlay{
+  display: block;
+}
+body.showSignInForm .popup{
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+body.showSignUpForm .popups-overlay{
+  display: block;
+}
+body.showSignUpForm .popups{
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+.popup .popup-close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  background: #555;
+  color: #f5f5f5;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.popup .form .header{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin: 20px 0px;
+  }
+
+  .popup .form .element{
+    padding: 8px 20px;
+  }
+
+.popup .form .element label{
+  display: block;
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.popup .form .element input {
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #aaa;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.popup .form .element button{
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px 0px;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #4889da;
+  color: #f5f5f5;
+}
+
+.popups .popups-close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  background: #555;
+  color: #f5f5f5;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.popups .form .header{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin: 20px 0px;
+  }
+
+  .popups .form .element{
+    padding: 8px 20px;
+  }
+
+.popups .form .element label{
+  display: block;
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.popups .form .element input {
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #aaa;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.popups .form .element button{
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px 0px;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #4889da;
+  color: #f5f5f5;
+}
+h1.razzle-dazzle{
+    font-size: 4em;
+    font-weight: 800;
+    line-height: 46px;
+    color: rgb(0, 216, 36);
+}
+h2.razzle-dazzle{
+  font-size: 3em;
+
+    line-height: 42px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+}
+h1.razzle-dazzle-1{
+  font-size: 2.5em;
+    line-height: 28px;
+    font-weight: 800;
+    color: white;
+}
+h2.razzle-dazzle-1{
+  ont-size: 1.5em;
+    line-height: 17px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+h1.razzle-dazzle-1{
+  font-size: 2.5em;
+    line-height: 28px;
+    font-weight: 800;
+    color: white;
+}
+h2.razzle-dazzle-1{
+  ont-size: 1.5em;
+    line-height: 17px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+h1.razzle-dazzle-2{
+  font-size: 2.5em;
+      line-height: 33px;
+      font-weight: 800;
+      color: rgb(214, 67, 0);
+      text-align: center;
+}
+h2.razzle-dazzle-2{
+  font-size: 1.2em;
+
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+.sub-title{
+
+}
+.sub-title h2{
+  font-size: 2.5em;
+  font-weight: bolder;
+  text-align: center;
+  color:rgb(0,88,38);
+}
+.blogged-pic{
+  position: relative;
+  max-width: 250px !important;
+}
+.blogged p{
+  font-weight: 500 !important;
+  font-size: 20px !important;
+}
+.blogged h4{
+  font-family: sans-serif !important;
+  font-size: 22px !important;
+}
+.b-link{
+  cursor: pointer;
+    background: var(--btn-color);
+    font-size: 16px;
+    color: #000000;
+    border: 2px solid var(--btn-color);
+    font-weight: 600;
+    outline: none;
+    border-radius: 0px;
+    padding: 12px 30px;
+    display: inline-block;
+    margin-top: 24px;
+    border-radius: 0.25rem;
+}
+.b-link a{
+  color: black;
+}
+.b-link:hover{
+  background: #ffbf00;
+  border: 2px solid #ffbf00;
+}
+
+.blogged-info{
+  position: absolute;
+  height: 54px !important;
+  width: 54px !important;
+  top: 0 !important;
+    left: 0 !important;
+    background-color: #fff;
+    box-shadow: 0 0 9px rgba(0,0,0,.1);
+    z-index: 2 !important;
+
+
+}
+span.date{
+  padding: 4px 4px 0 4px !important;
+
+    font-size: 21px !important;
+      text-align: center !important;
+      color: black !important;
+      font-weight: 500 !important;
+}
+span.month{
+  padding: 0 4px 4px 4px !important;
+
+
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    letter-spacing: .5px !important;
+    color: black !important;
+}
+#myImgs {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImgs:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modaly {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modaly-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modaly-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closer {
+  position: static;
+  top: 65px;
+  right: 55px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closer:hover,
+.closer:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modaly-content {
+    width: 100%;
+  }
+}
 @media (min-width: 576px) {
   .wrapper {
     max-width: 540px; } }
@@ -3810,6 +4203,23 @@ p {
     font-size: 16px;
     line-height: 20px;
     color: #ffffff; }
+    ._w3l-footer-22 ul.jst1-link li a {
+      font-size: 16px;
+      line-height: 20px;
+      color: #917474; }
+        ._w3l-footer-22 ul.jst1-link li{
+        list-style-type: none;
+        text-decoration: none;
+
+      }
+      ._w3l-footer-22 ul.jst1-link li a:hover{
+        text-decoration: underline;
+      }
+      ._w3l-footer-22 h5{
+        font-size: 22px;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      }
   ._w3l-footer-22 .columns p {
     font-size: 16px;
     line-height: 20px;

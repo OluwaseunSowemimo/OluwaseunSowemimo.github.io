@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Threshing Agriculture Responsive Website Template | Home</title>
+  <title>Ope Farms | Home</title>
   <link rel="stylesheet" href="assets/css/style-freedom.css">
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+
 </head>
 <body>
 <!-- header -->
@@ -13,14 +15,13 @@
     <header>
         <div class="wrapper">
             <div class="header">
-              
+
                 <div>
                     <h1>
-                        <a href="index.html" class="logo"><span class="fa fa-leaf"></span> Threshing</a>
-                        <!-- if logo is image enable this   
+
 						<a class="logo" href="index.html">
-							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-						</a> -->
+							<img src="assets/images/logo.jpg" alt="logo" title="logo" style="height:35px;" />
+						</a>
                     </h1>
                 </div>
                 <div class="bottom-menu-content">
@@ -31,6 +32,32 @@
                             <li><a href="index.html" class="link-nav">Home</a></li>
                             <li><a href="about.html" class="link-nav">About</a></li>
                             <li>
+                                <label for="drop-4" class="toggle toogle-2">Shop <span class="fa fa-caret-down"
+                                        aria-hidden="true"></span></label>
+                                <a href="store.html" class="link-nav dropdown-toggle">Shop <span class="fa fa-caret-down"
+                                        aria-hidden="true"></span></a>
+                                <input type="checkbox" id="drop-4" />
+                                <ul>
+                                    <li><a href="ecommerce.html">Ecommerce</a></li>
+                                    <li><a href="ecommerce-single.html">Ecommerce Single</a></li>
+                                    <li><a href="ecommerce-cart.html">Ecommerce Cart</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <label for="drop-3" class="toggle toogle-2">Blog <span class="fa fa-caret-down"
+                                        aria-hidden="true"></span></label>
+                                <a href="#blog" class="link-nav dropdown-toggle">Blog <span class="fa fa-caret-down"
+                                        aria-hidden="true"></span></a>
+                                <input type="checkbox" id="drop-3" />
+                                <ul>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="contact.html" class="link-nav">Contact Us</a></li>
+                          <li>
                                 <!-- First Tier Drop Down -->
                                 <label for="drop-2" class="toggle toogle-2">Pages <span class="fa fa-caret-down"
                                         aria-hidden="true"></span></label>
@@ -39,7 +66,7 @@
                                 <input type="checkbox" id="drop-2" />
                                 <ul class="first-dropdwon">
                                     <li><a href="services.html">Services</a></li>
-                                   
+
                                     <li><a href="gallery.html">Gallery</a></li>
                                    <li><a href="team-single.html">Team Member</a></li>
                                     <li><a href="timeline.html">Timeline</a></li>
@@ -55,38 +82,70 @@
                                     <li><a href="email-template.html">Email Template</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <label for="drop-3" class="toggle toogle-2">Blog <span class="fa fa-caret-down"
-                                        aria-hidden="true"></span></label>
-                                <a href="#blog" class="link-nav dropdown-toggle">Blog <span class="fa fa-caret-down"
-                                        aria-hidden="true"></span></a>
-                                <input type="checkbox" id="drop-3" />
-                                <ul>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <label for="drop-4" class="toggle toogle-2">Shop <span class="fa fa-caret-down"
-                                        aria-hidden="true"></span></label>
-                                <a href="#shop" class="link-nav dropdown-toggle">Shop <span class="fa fa-caret-down"
-                                        aria-hidden="true"></span></a>
-                                <input type="checkbox" id="drop-4" />
-                                <ul>
-                                    <li><a href="ecommerce.html">Ecommerce</a></li>
-                                    <li><a href="ecommerce-single.html">Ecommerce Single</a></li>
-                                    <li><a href="ecommerce-cart.html">Ecommerce Cart</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html" class="link-nav">Contact</a></li>
-                           
+                            <li><a href="#" class="link-nav" onclick="openSignInForm()">Login/Register</a></li>
+                            <li> <a class="link-nav" href="cart.html"> <span><i class="fa fa-shopping-cart"></i></span> </a> </li>
                         </ul>
+
+
                     </nav>
                 </div>
             </div>
         </div>
     </header>
     <!-- //header -->
+</div>
+<div class="popup-overlay"></div>
+<div class="popup">
+  <div class="popup-close" onclick="closeSignInForm()">&times;</div>
+  <div class="form">
+    <div class="header">
+      Sign In
+
+    </div>
+    <div class="element">
+      <label for="email">Email</label>
+      <input type="text" id="email">
+
+    </div>
+    <div class="element">
+      <label for="password">Password</label>
+      <input type="password" id="password">
+
+    </div>
+    <div class="element">
+      <button>Sign In</button>
+    </div>
+    <br><br>
+    <div>
+      <p style="text-indent: 20px;"> Don't have an account? <a href="#" onclick="openSignUpForm()">Sign Up</a></p>
+    </div>
+
+  </div>
+</div>
+
+<div class="popups-overlay"></div>
+<div class="popups">
+  <div class="popups-close" onclick="closeSignUpForm()">&times;</div>
+  <div class="form">
+    <div class="header">
+      Sign Up
+
+    </div>
+    <div class="element">
+      <label for="email">Email</label>
+      <input type="text" id="email">
+
+    </div>
+    <div class="element">
+      <label for="password">Password</label>
+      <input type="password" id="password">
+
+    </div>
+    <div class="element">
+      <button>Sign Up</button>
+    </div>
+
+  </div>
 </div>
 <!-- covers -->
 <section class="w3l-covers-9-main">
@@ -101,11 +160,14 @@
                     <div class="wrapper">
                         <div class="cover-top-center-9">
                             <div class="w3ls_cover_txt-9">
-                                <h6 class="tag-cover-9">Agriculture</h6>
-                                <h3 class="title-cover-9">We Grow Best Food</h3>
-                                <p class="para-cover-9">Once aute irure dolor in reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur consectetur adipiscing elit.</p>
-                                <a href="single.html" class="actionbg button-cover-9">Read More</a>
+                              <br><br><br>
+
+                              <h1 class="title-cover-9 razzle-dazzle">OPE FARMS</h1>
+                              <br>
+                                <h2 class="tag-cover-9 razzle-dazzle">ORGANIC VEGETABLES</h2>
+                                <br>
+                               <p class="para-cover-9 razzle-dazzle">All Products Fresh From The Farm...</p>
+                                <a href="store.html/#vegetables" class="actionbg button-cover-9">View All Products</a>
                             </div>
                         </div>
                     </div>
@@ -114,12 +176,10 @@
                     <div class="wrapper">
                         <div class="cover-top-center-9">
                             <div class="w3ls_cover_txt-9">
-                                <h6 class="tag-cover-9">Agriculture</h6>
-                                <h3 class="title-cover-9">Cultivating 
-                                    growing ideas</h3>
-                                <p class="para-cover-9">Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum mollit anim id est.</p>
-                                <a href="single.html" class="actionbg button-cover-9">Read More</a>
+                              <h1 class="title-cover-9 razzle-dazzle-1">FRESH POULTRY PRODUCTS</h1>
+                              <br> <br>
+                                <h2 class="tag-cover-9 razzle-dazzle-1">PASTURE RAISED WITH NO HORMONES</h2>
+                                <a href="store.html/animal" class="actionbg button-cover-9">VIEW ALL PRODUCTS</a>
                             </div>
                         </div>
                     </div>
@@ -128,95 +188,46 @@
                     <div class="wrapper">
                         <div class="cover-top-center-9">
                             <div class="w3ls_cover_txt-9">
-                                <h6 class="tag-cover-9">Agriculture</h6>
-                                <h3 class="title-cover-9">Products 
-                                    for agriculture</h3>
-                                <p class="para-cover-9">Sed ut perspiciatis unde omnis iste natus error sit
-                                    voluptatem accusantium doloremque laudantium sunt in culpa qui laborum.</p>
+                              <h1 class="title-cover-9 razzle-dazzle-2">ORGANIC FARM USE PRODUCTS</h1>
+                              <br><br>
+
+                                <h2 class="tag-cover-9 razzle-dazzle-2">ZERO CHEMICAL FARM INPUT FOR ORGANIC FARMING</h2>
                                 <a href="single.html" class="actionbg button-cover-9">Read More</a>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="wrapper">
-                        <div class="cover-top-center-9">
-                            <div class="w3ls_cover_txt-9">
-                                <h6 class="tag-cover-9">Agriculture</h6>
-                                <h3 class="title-cover-9">We Grow Best Food</h3>
-                                <p class="para-cover-9">Once aute irure dolor in reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur consectetur adipiscing elit.</p>
-                                <a href="single.html" class="actionbg button-cover-9">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
             <div class="arrows">
                 <label for="slides_1"></label>
                 <label for="slides_2"></label>
                 <label for="slides_3"></label>
-                <label for="slides_4"></label>
+
             </div>
             <div class="navigation">
                 <div>
                     <label for="slides_1"></label>
                     <label for="slides_2"></label>
                     <label for="slides_3"></label>
-                    <label for="slides_4"></label>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- //covers -->
 
- <!-- w3l-features-17 -->
-	<section class="w3l-features-17">
-			<div class="w3l-features-17_sur">
-				   <div class="wrapper">
-				     <div class="w3l-features-17-top_sur">
-						<div class="w3l-features-17-left_sur">
-							<h2>Grow Naturally
-								Leaders In The Field</h2>
-							<p> Proin vulputate semper odio quam. Nulla commodo gravida porttitor. Aenean posuere lacus quis.</p>	
-							<a href="services.html" class="btn fea_bt">Read More</a>	
-						</div>
-						<div class="w3l-features-17-right_sur">
-							<div class="w3l-features-17-right-tp_sur">
-									<span class="fa fa-viadeo"></span>
-								<h5><a href="services.html">Natural Products</a></h5>
-								<p> Proin vulputate semper odio quam. Nulla commodo gravida porttitor Aenean posuere lacus quis.</p>		
-							</div>
-							<div class="w3l-features-17-right-tp_sur">
-									<span class="fa fa-leaf"></span>
-								<h5><a href="services.html">Cattle</a></h5>
-								<p>Proin vulputate semper odio quam. Nulla commodo gravida porttitor Aenean posuere lacus quis.</p>		
-							</div>
-							<div class="w3l-features-17-right-tp_sur">
-									<span class="fa fa-pagelines"></span>
-								<h5><a href="services.html">Wheat Cultivation</a></h5>
-								<p>Proin vulputate semper odio quam. Nulla commodo gravida porttitor Aenean posuere lacus quis. </p>		
-							</div>
-							<div class="w3l-features-17-right-tp_sur">
-									<span class="fa fa-apple"></span>
-								<h5><a href="services.html">Modern Truck</a></h5>
-								<p>Proin vulputate semper odio quam. Nulla commodo gravida porttitor Aenean posuere lacus quis.</p>		
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	</section>
-<!-- /w3l-features-17 -->
 
+<!--
 <section class="_w3l-cover-3">
     <div class="cover top-bottom">
  <div class="cover-overlay">
- 
+
     <div class="wrapper">
       <div class="middle-section text-center">
-       
+
         <div class="section-width">
           <h2>Farm, Garden and Agriculture</h2>
         </div>
@@ -241,56 +252,241 @@
 </section>
 
 <!-- services 1-->
+
 <section class="w3l-services-2">
 	<div class="services2">
 		<div class="wrapper">
-			
+
 			<div class="services2-content">
 				<div class="column">
-					
+
 					<a href="single.html"><img src="assets/images/ser_1.jpg" class="img-responsive" alt="" /></a>
 						<div class="service-info">
 							<h4><a href="single.html">Crop Selection</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium</p>
 							<a href="services.html" class="btn ser_bt">Read More</a>
 						</div>
-					
+
 				</div>
 				<div class="column">
-					
+
 					<a href="single.html"><img src="assets/images/ser_2.jpg" class="img-responsive" alt="" /></a>
 						<div class="service-info">
 							<h4><a href="single.html">Land Preparation</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium</p>
 							<a href="services.html" class="btn ser_bt">Read More</a>
 						</div>
-					
+
 				</div>
 				<div class="column">
-					
+
 					<a href="single.html"><img src="assets/images/ser_3.jpg" class="img-responsive" alt="" /></a>
 						<div class="service-info">
 							<h4><a href="single.html">Seed Selection</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium</p>
 							<a href="services.html" class="btn ser_bt">Read More</a>
 						</div>
-					
+
 				</div>
-			
+
 			</div>
 		</div>
 	</div>
 </section>
 <!-- //services 1 -->
- 
+
+<!--featured products -->
+<section class="w3l-products-1">
+  <div class="sub-title">
+    <br>
+    <h2>FEATURED PRODUCTS</h2>
+
+  </div>
+ <div class="products1">
+   <div class="wrapper">
+     <div class="products1-content">
+       <div class="column">
+         <a href="ecommerce-single.html"><img src="assets/images/Neem-oil.png" class="img-responsive" alt="" /></a>
+         <h4><a href="ecommerce-single.html">Neem Oil (1ltr)</a></h4>
+         <p>₦3,500</p>
+         <ul class="star">
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+           </ul>
+           <a href="#" class="btn ecom_bt">Add To Cart</a>
+       </div>
+       <div class="column">
+           <a href="ecommerce-single.html"><img src="assets/images/corn.jpg" class="img-responsive" alt="" /></a>
+         <h4><a href="ecommerce-single.html">Sweet Corn (1kg)</a></h4>
+         <p>₦700</p>
+         <ul class="star">
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+           </ul>
+           <a href="#" class="btn ecom_bt">Add To Cart</a>
+       </div>
+       <div class="column">
+           <a href="ecommerce-single.html"><img src="assets/images/Palm-Kernel-Oil.png" class="img-responsive" alt="" /></a>
+         <h4><a href="ecommerce-single.html">Palm Kernel Oil (Adin)</a></h4>
+         <p>₦600 – ₦1,000</p>
+         <ul class="star">
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+           </ul>
+           <a href="#" class="btn ecom_bt">Select Options</a>
+       </div>
+       <div class="column">
+           <a href="ecommerce-single.html"><img src="assets/images/Palm-Oil.png" class="img-responsive" alt="" /></a>
+         <h4><a href="ecommerce-single.html">Palm Oil</a></h4>
+         <p>₦650 – ₦1,500</p>
+         <ul class="star">
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+           </ul>
+           <a href="#" class="btn ecom_bt">Select Options</a>
+       </div>
+       <div class="column">
+           <a href="ecommerce-single.html"><img src="assets/images/Gari-Ope.png" class="img-responsive" alt="" /></a>
+         <h4><a href="ecommerce-single.html">Gari Ope (Garri Ijebu) (3kg)</a></h4>
+         <p>₦1,500</p>
+         <ul class="star">
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+             <li><a href="#"><span class="fa fa-star"></span></a></li>
+           </ul>
+           <a href="#" class="btn ecom_bt">Add To Cart</a>
+       </div>
+       <div class="column">
+           <a href="ecommerce-single.html"><img src="assets/images/Shoko.png" class="img-responsive" alt="" /></a>
+           <h4><a href="ecommerce-single.html">Shoko 1kg</a></h4>
+           <p>₦600</p>
+           <ul class="star">
+               <li><a href="#"><span class="fa fa-star"></span></a></li>
+               <li><a href="#"><span class="fa fa-star"></span></a></li>
+               <li><a href="#"><span class="fa fa-star"></span></a></li>
+               <li><a href="#"><span class="fa fa-star"></span></a></li>
+               <li><a href="#"><span class="fa fa-star"></span></a></li>
+             </ul>
+             <a href="#" class="btn ecom_bt">Add To Cart</a>
+         </div>
+
+     </div>
+   </div>
+ </div>
+</section>
+<!-- //featured products1 -->
+
+<!--Blog -->
+<section class="w3l-products-1">
+  <div class="sub-title">
+    <br>
+    <h2>BLOG</h2>
+
+  </div>
+  <div class="products1">
+    <div class="wrapper">
+      <div class="products1-content">
+        <div class="column">
+
+            <div class="blogged-pic">
+            <a href="https://opefarms.com/health-benefits-of-oregano-and-how-to-use-oregano/"><img  class="img-responsive" src="assets/images/oregano.png" alt="" /></a>
+            <div class="blogged-info">
+              <p> <span class="date">03</span> <span class="month">OCT</span></p>
+            </div>
+            </div>
+            <h4><a href="https://opefarms.com/health-benefits-of-oregano-and-how-to-use-oregano/">Health Benefits of Oregano and How To Use Oregano</a></h4>
+            <p>Oregano is a herb that is useful for almost every dish possible. The benefits of oregano to the health also runs in numerous ways. It is rich in vitamins A, C, and K, as well...</p>
+            <div class="b-link">
+
+            <a href="https://opefarms.com/health-benefits-of-oregano-and-how-to-use-oregano/">Read More</a>
+          </div>
+
+        </div>
+
+        <div class="column">
+
+            <div class="blogged-pic">
+            <a href="https://opefarms.com/jute-leaves-benefits-recipes/"><img  class="img-responsive" src="assets/images/ewedu.png" alt="" /></a>
+            <div class="blogged-info">
+              <p> <span class="date">21</span> <span class="month">SEP</span></p>
+            </div>
+            </div>
+            <h4><a href="https://opefarms.com/jute-leaves-benefits-recipes/">Health Benefits and Recipe of Jute Leaves</a></h4>
+            <p>Jute is the vegetable that graces the plate of many solid dishes at a Yoruba party. It is a green leafy edible vegetable which is often prepared into a delicious slimy soup. In English,...</p>
+            <div class="b-link">
+
+            <a href="https://opefarms.com/jute-leaves-benefits-recipes/">Read More</a>
+          </div>
+
+        </div>
+
+        <div class="column">
+
+
+            <div class="blogged-pic">
+            <a href="https://opefarms.com/chinese-cabbage-and-all-that-you-need-to-know-about-it/"><img  class="img-responsive" src="assets/images/fresh-chinese-cabbage.jpg" alt="" /></a>
+            <div class="blogged-info">
+              <p> <span class="date">18</span> <span class="month">SEP</span></p>
+            </div>
+            </div>
+            <h4><a href="https://opefarms.com/chinese-cabbage-and-all-that-you-need-to-know-about-it/">Chinese Cabbage And All That You Need To Know About It</a></h4>
+            <p>What is Chinese Cabbage? Ope Farms Chinese cabbage is a vegetable of the Asian origin which is grown in Nigeria under a strictly organic condition...</p>
+            <div class="b-link">
+
+            <a href="https://opefarms.com/chinese-cabbage-and-all-that-you-need-to-know-about-it/">Read More</a>
+          </div>
+
+        </div>
+
+        <div class="column">
+
+
+            <div class="blogged-pic">
+            <a href="https://opefarms.com/where-to-buy-quail-eggs/"><img  class="img-responsive" src="assets/images/egg.jpg" alt="" /></a>
+            <div class="blogged-info">
+              <p> <span class="date">27</span> <span class="month">AUG</span></p>
+            </div>
+            </div>
+            <h4><a href="https://opefarms.com/where-to-buy-quail-eggs/">Chinese Cabbage And All That You Need To Know About It</a></h4>
+            <p>If you are considering where to buy quail eggs for eating, you’ve certainly reached the right place. You can visit our online store to place an order for quail eggs. However...</p>
+            <div class="b-link">
+
+            <a href="https://opefarms.com/where-to-buy-quail-eggs/">Read More</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //Blog -->
+
+
+
+
  <div class="w3l-features-15">
         <!-- features15 block -->
         <section id="features15-block">
             <div class="feaa-overlay">
             <div class="wrapper">
                     <div class="content-info">
-                            <h3 class="content-title">We Grow Best Food</h3>
-                            <p class="content-text">Proin vulputate semper odio quam. Nulla commodo gravida porttitor Aenean posuere lacus quis.</p>
+                            <h3 class="content-title">OUR CORE VALUES</h3>
+                          <!--  <p class="content-text">Proin vulputate semper odio quam. Nulla commodo gravida porttitor Aenean posuere lacus quis.</p> -->
                         </div>
                 <div class="d-grid features15-col-3">
                    <div class="feat-lft">
@@ -299,11 +495,12 @@
                                 <span class="fa fa-leaf"></span>
                             </div>
                             <div class="features15-para">
-                                <h4><a href="#">Fresh</a></h4>
-                                <p>In such a test, the user performs realistic tasks by interacting with the paper prototype</p>
+                                <h4><a href="#">Healthy Products</a></h4>
+                              <!--  <p>In such a test, the user performs realistic tasks by interacting with the paper prototype</p> -->
                             </div>
                         </div>
-                        <div class="features15-col-text d-grid">
+                        <br> <br> <br> <br>
+                      <!--  <div class="features15-col-text d-grid">
                             <div class="features15-info">
                                 <span class="fa fa-heartbeat"></span>
                             </div>
@@ -312,7 +509,17 @@
                                 <p>Three techniques of paper prototyping used for usability testing are comps, wireframes</p>
                             </div>
                         </div>
+                      -->
                         <div class="features15-col-text d-grid">
+                                <div class="features15-info">
+                                    <span class="fa fa-gift"></span>
+                                </div>
+                                <div class="features15-para">
+                                        <h4><a href="#">Shop On-The-Go</a></h4>
+                                <!--    <p>In such a test, the user performs realistic tasks by interacting with the paper prototype</p>  -->
+                                </div>
+                            </div>
+                      <!--  <div class="features15-col-text d-grid">
                             <div class="features15-info">
                                 <span class="fa fa-pagelines"></span>
                             </div>
@@ -321,9 +528,11 @@
                                 <p>Rapid prototyping involves a group of designers who each create a paper prototype </p>
                             </div>
                         </div>
+                      -->
                     </div>
+
                     <div class="feat-mid">
-                          <img src="assets/images/fe_1.png" class="img-responsive" alt="">
+                          <img src="assets/images/fe_1.png" class="img-responsive" style="display:none;" alt="">
                      </div>
                      <div class="feat-rgt">
                             <div class="features15-col-text d-grid">
@@ -331,41 +540,56 @@
                                     <span class="fa fa-thumbs-up"></span>
                                 </div>
                                 <div class="features15-para">
-                                        <h4><a href="#">Tasty</a></h4>
-                                    <p>Functionality is similarly unimportant, but in this case are closer to the final product</p>
+                                        <h4><a href="#">Safe Delivery</a></h4>
+                                  <!--  <p>Functionality is similarly unimportant, but in this case are closer to the final product</p> -->
                                 </div>
                             </div>
+                            <br><br><br><br>
                             <div class="features15-col-text d-grid">
                                 <div class="features15-info">
                                     <span class="fa fa-heart"></span>
                                 </div>
                                 <div class="features15-para">
-                                        <h4><a href="#">Yammy</a></h4>
-                                    <p>Three techniques of paper prototyping used for usability testing are comps, wireframes</p>
+                                        <h4><a href="#">Buyer's Protection</a></h4>
+                                <!--    <p>Three techniques of paper prototyping used for usability testing are comps, wireframes</p> -->
                                 </div>
                             </div>
-                            <div class="features15-col-text d-grid">
-                                    <div class="features15-info">
-                                        <span class="fa fa-gift"></span>
-                                    </div>
-                                    <div class="features15-para">
-                                            <h4><a href="#">Premium</a></h4>
-                                        <p>In such a test, the user performs realistic tasks by interacting with the paper prototype</p>
-                                    </div>
-                                </div>
-                    </div> 
+
+                    </div>
                 </div>
             </div>
         </div>
         </section>
     </div>
         <!-- features15 block -->
-   
+
+        <!-- Associations -->
+        <section>
+
+        <div class="sub-title">
+          <br>
+          <h2>ASSOCIATIONS WE BELONG TO</h2>
+
+        </div>
+        <img id="myImgs" src="assets/images/Organic-NOAN.jpg" alt="NOAN" style="width:100%;max-width:300px;height:auto;">
+        <img id="myImgs1" src="assets/images/Organic.jpg" alt="PGS" style="width:100%;max-width:300px;height:auto;">
+        <img id="myImgs2" src="assets/images/growth.jpg" alt="NGP" style="width:100%;max-width:300px;height:auto;">
+        <img id="myImgs3" src="assets/images/VH-Span.jpg" alt="VH-Span" style="width:100%;max-width:300px;height:auto;">
+
+<!-- The Modal -->
+<div id="myModaly" class="modaly">
+  <span class="closer">&times;</span>
+  <img class="modaly-content" id="img01">
+  <div id="caption"></div>
+</div>
+        </section>
+        <!-- //Associations -->
+
 <section class="w3l-content-18">
     <div class="content-main">
         <div class="wrapper">
             <div class="content-info">
-                <h3 class="content-title">What our clients says </h3>
+                <h3 class="content-title">WHAT OUR CLIENTS SAY </h3>
                 <p class="content-text">Proin vulputate semper odio quam. Nulla commodo gravida porttitor Aenean posuere lacus quis.</p>
             </div>
         </div>
@@ -388,7 +612,7 @@
 				<p>Adam Glichrist</p>
 			</div>
 		</div>
-	</section>	
+	</section>
 </div>
 
 <section class="_w3l-footer-22">
@@ -397,34 +621,68 @@
 		<div class="wrapper">
 			<div class="text-txt">
 				<div class="left-side">
-					<h3><a href="index.html"><span class="fa fa-leaf"></span> Treshing </a></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+          <div>
+              <h1>
 
-					<div class="subscride-link">
-						<h4>Subscribe </h4>
-						<form action="#" class="subscribe-footer-19" method="post">
-							<input type="email" name="email" placeholder="Your email" required="">
-							<button><span class="fa fa-paper-plane"></span></button>
-						</form>
+      <a class="logo" href="index.html">
+        <img src="assets/images/logo.jpg" alt="logo" title="logo" style="height:auto; width:auto;" />
+      </a>
+              </h1>
+          </div>
 
-					</div>
+
+          <div class="subscride-link">
+            <h4>Subscribe </h4>
+            <form action="#" class="subscribe-footer-19" method="post">
+              <input type="email" name="email" placeholder="Your email" required="">
+              <button><span class="fa fa-paper-plane"></span></button>
+            </form>
+
+          </div>
 
 				</div>
 
 				<div class="right-side">
-					<h4>Proin vulputate semper odio quam. Nulla commodo gravida porttitor Aenean posuere lacus quis.
-						Lorem ipsum dolor sit amet.</h4>
+
+
 					<div class="sub-columns">
+
 						<div class="sub-one-left">
-							<h6>Lorem ipsum</h6>
-							<p>Nulla commodo gravida porttitor Aenean posuere lacus quis. </p>
+							<h5>PRODUCT MENU</h5> <br>
+              <ul class="jst1-link">
+              <h6> <li> <a href="#">Animal Products</a> </li> </h6>
+              <h6><li> <a href="#">Farm/Garden Inputs</a> </li> </h6>
+              <h6><li> <a href="#">Fruits</a> </li> </h6>
+              <h6><li> <a href="#">Oil & Drinks</a> </li> </h6>
+              <h6><li> <a href="#">Processed Foods</a> </li></h6>
+              <h6><li> <a href="#">Vegetables</a> </li></h6>
+              <h6><li> <a href="#">Rhizomes & Tubers</a> </li></h6>
+              <h6><li> <a href="#">Whole Grains & Seedlings</a> </li></h6>
+
+
+
+
+
+
+              </ul>
+						</div>
+						<div class="sub-one-left">
+							<h5>USEFUL LINKS</h5> <br>
+              <ul class="jst1-link">
+            <h6>  <li> <a href="#">About Us</a> </li> </h6>
+            <h6>  <li> <a href="#">Contact Us</a> </li> </h6>
+            <h6>  <li> <a href="#">Blog</a> </li> </h6>
+            <h6>  <li> <a href="#">Return Policy</a> </li> </h6>
+              </ul>
 
 						</div>
-						<div class="sub-two-right">
-							<h6>Lorem ipsum</h6>
-							<p>Nulla commodo gravida porttitor Aenean posuere </p>
-
-						</div>
+            <div class="sub-two-right">
+            <h5>OUR STORE</h5> <br>
+            <ul class="jst1-link">
+          <h6>  <li> <a href="https://g.page/opefarms?share">53 Isaac John St, Ikeja GRA, Lagos. </a> </li> </h6> <br>
+          <h6>  <li> <a href="callto:+2348035355714">+234-803-535-5714</a> </li> </h6>
+            </ul>
+          </div>
 					</div>
 				</div>
 			</div>
@@ -433,7 +691,7 @@
 					<ul class="jst-link">
 						<li><a href="#">Privacy policy </a> </li>
 						<li><a href="#">Term of service</a></li>
-						
+
 					</ul>
 				</div>
 				<div class="columns">
@@ -442,11 +700,11 @@
 						<li><a href="#"><span class="fa fa-twitter fot"></span></a></li>
 						<li><a href="#"><span class="fa fa-instagram fot"></span></a></li>
 						<li><a href="#"><span class="fa fa-dribbble fot"></span></a></li>
-						
+
 					</ul>
 				</div>
 				<div class="columns copy-right">
-					<p>@2019 All Rights Reserved.</p>
+					<p class="copy-right"> &copy; <script>document.write(new Date().getFullYear())</script> Ope Farms. All Rights Reserved</p>
 				</div>
 			</div>
 		</div>
@@ -456,12 +714,100 @@
     <button onclick="topFunction()" id="movetop" title="Go to top">
 		<span class="fa fa-angle-up"></span>
 		   </button>
+
+       <script>
+// Get the modal
+var modal = document.getElementById("myModaly");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImgs");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closer")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModaly");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImgs1");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closer")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModaly");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImgs2");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closer")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+</script><script>
+// Get the modal
+var modal = document.getElementById("myModaly");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImgs3");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closer")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+</script>
 		   <script>
 			   // When the user scrolls down 20px from the top of the document, show the button
 			   window.onscroll = function () {
 				   scrollFunction()
 			   };
-		
+
 			   function scrollFunction() {
 				   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 					   document.getElementById("movetop").style.display = "block";
@@ -469,7 +815,7 @@
 					   document.getElementById("movetop").style.display = "none";
 				   }
 			   }
-		
+
 			   // When the user clicks on the button, scroll to the top of the document
 			   function topFunction() {
 				   document.body.scrollTop = 0;
@@ -477,4 +823,21 @@
 			   }
 		   </script>
 		   <!-- /move top -->
+       <script>
+       function openSignInForm(){
+         document.body.classList.add("showSignInForm");
+       }
+       function closeSignInForm(){
+         document.body.classList.remove("showSignInForm");
+       }
+       function openSignUpForm(){
+         document.body.classList.add("showSignUpForm");
+       }
+       function closeSignUpForm(){
+         document.body.classList.remove("showSignUpForm");
+       }
+       </script>
+
 </section>
+</body>
+</html>
