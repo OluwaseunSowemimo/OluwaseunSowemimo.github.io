@@ -47,12 +47,12 @@
     }
 #leftbox{
 
-display: inline !important;
+display: flex !important;
 
 }
 #rightbox{
 
-display: inline !important;
+display: flex !important;
 
 }
     .work {
