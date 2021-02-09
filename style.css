@@ -24,7 +24,7 @@
 
 
     body {
-        width: fit-content !important;
+        width: auto !important;
         background-color: #20A8AA;
         margin-left: -8% !important;
         margin-right: 10% !important;
