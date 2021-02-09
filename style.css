@@ -42,7 +42,7 @@
     }
     
     .about-me{
-        display: flex !important;
+        display: inline !important;
         
     }
     .work {
