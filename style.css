@@ -24,10 +24,9 @@
 
 
     body {
-        width: 100% !important;
+        width: auto !important;
         background-color: #20A8AA;
-        margin-left: -8% !important;
-        margin-right: 10% !important;
+       
     }
     
     #nav {
@@ -43,7 +42,7 @@
     }
     
     .about-me{
-        display: inline !important;
+        display: inline-block !important;
         
     }
     .work {
