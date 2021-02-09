@@ -42,9 +42,19 @@
     }
     
     .about-me{
-        display: grid !important;
+        display: inline !important;
         
     }
+#leftbox{
+
+display: inline !important;
+
+}
+#rightbox{
+
+display: inline !important;
+
+}
     .work {
         margin-right: 50px;
         font-family: Raleway sans-serif;
