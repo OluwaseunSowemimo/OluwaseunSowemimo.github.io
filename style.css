@@ -42,17 +42,17 @@
     }
     
     .about-me{
-        display: inline !important;
+        display: grid !important;
         
     }
 #leftbox{
 
-display: flex !important;
+display: grid !important;
 
 }
 #rightbox{
 
-display: flex !important;
+display: grid !important;
 
 }
     .work {
