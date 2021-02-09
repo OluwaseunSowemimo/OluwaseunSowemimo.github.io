@@ -24,7 +24,7 @@
 
 
     body {
-        width: auto !important;
+        width: 100% !important;
         background-color: #20A8AA;
         margin-left: -8% !important;
         margin-right: 10% !important;
